@@ -1,0 +1,446 @@
+1): getter setter method :
+all primitve data type with String 
+-----------------------x-----------------------
+class A{
+   private boolean bl;
+   private char c;
+   private byte b;
+   private short sh;
+   private int a;
+   private long l;
+   private float f;
+   private double d;
+   private String s;
+   public void setA(boolean bl) {
+       this.bl = bl;
+   }
+   public boolean getA() {
+       return bl;
+   }
+   public void setA1(char c) {
+    this.c=c;
+}
+public char getA1() {
+    return c;
+}
+public void setA4(int a) {
+    this.a = a;
+}
+public int getA4() {
+    return a;
+}
+public void setA5(long l) {
+    this.l=l;
+}
+public long getA5() {
+    return l;
+}
+public void setA6(float f) {
+    this.f=f;
+}
+public float getA6() {
+    return f;
+}
+public void setA7(double d) {
+    this.d=d;
+}
+public double getA7() {
+    return d;
+}
+public void setA8(String s) {
+    this.s=s;
+}
+public String getA8() {
+    return s;
+}
+}
+public class Main{
+    public static void main(String[] args) {
+        A ob = new A();
+        ob.setA(true);
+        System.out.println(ob.getA());
+        ob.setA1('A');
+        System.out.println(ob.getA1());
+        ob.setA4(500000000);
+        System.out.println(ob.getA4());
+        ob.setA5(46738228827744l);
+        System.out.println(ob.getA5());
+        ob.setA6(57.45f);
+        System.out.println(ob.getA6());
+        ob.setA7(756473.577);
+        System.out.println(ob.getA7());
+        ob.setA8("Hello Java");
+        System.out.println(ob.getA8());
+
+    }
+}
+-------------------------------------------------------------------------------------------------
+2): user input :
+class Student 
+name
+fname
+nmame
+class
+address
+contact 
+roll_no 
+gender 
+marks 
+getter setter 
+-----------------------x-----------------------
+import java.util.Scanner;
+
+class Student {
+    private String fname;
+    private String lname;
+    private String cLass;
+    private String add;
+    private long contact;
+    private int roll;
+    private String gender;
+    private int marks;
+
+    public void setfname(String fname) {
+        this.fname = fname;
+    }
+
+    public String getfname() {
+        return fname;
+    }
+
+    public void setlname(String lname) {
+        this.lname = lname;
+    }
+
+    public String getlname() {
+        return lname;
+    }
+
+    public void setClassName(String cLass) { 
+        this.cLass = cLass;
+    }
+
+    public String getClassName() { 
+        return cLass;
+    }
+
+    public void setadd(String add) {
+        this.add = add;
+    }
+
+    public String getadd() {
+        return add;
+    }
+
+    public void setcontact(long contact) {
+        this.contact = contact;
+    }
+
+    public long getcontact() {
+        return contact;
+    }
+
+    public void setroll(int roll) {
+        this.roll = roll;
+    }
+
+    public int getroll() {
+        return roll;
+    }
+
+    public void setgender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getgender() { 
+        return gender;
+    }
+
+    public void setmarks(int marks) {
+        this.marks = marks;
+    }
+
+    public int getmarks() {
+        return marks;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student stu = new Student();
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter First Name: ");
+        String firstname = sc.nextLine();
+        stu.setfname(firstname);
+
+        System.out.print("Enter Last Name: ");
+        String lastname = sc.nextLine();
+        stu.setlname(lastname);
+
+        System.out.print("Enter Class: ");
+        String cl = sc.nextLine();
+        stu.setClassName(cl); 
+
+        System.out.print("Enter Address: ");
+        String address = sc.nextLine();
+        stu.setadd(address);
+
+        System.out.print("Enter Contact: ");
+        long cont = sc.nextLong();
+        stu.setcontact(cont);
+        sc.nextLine(); 
+
+        System.out.print("Enter Roll No: ");
+        int rollno = sc.nextInt();
+        stu.setroll(rollno);
+        sc.nextLine(); 
+
+        System.out.print("Enter Gender: ");
+        String ge = sc.nextLine();
+        stu.setgender(ge);
+
+        System.out.print("Enter Marks: ");
+        int mark = sc.nextInt();
+        stu.setmarks(mark);
+
+        System.out.println("---------------------X---------------------");
+
+        System.out.println("First Name: " + stu.getfname());
+        System.out.println("Last Name: " + stu.getlname());
+        System.out.println("Class: " + stu.getClassName());
+        System.out.println("Address: " + stu.getadd());
+        System.out.println("Contact: " + stu.getcontact());
+        System.out.println("Roll No: " + stu.getroll());
+        System.out.println("Gender: " + stu.getgender()); 
+        System.out.println("Marks: " + stu.getmarks());
+    }
+}
+-------------------------------------------------------------------------------------------------
+3): company 
+empname
+eid
+efname
+econtact
+eaddress 
+ealternate_number 
+salary 
+edepartment 
+bankaccountnumber
+post 
+getter setter 
+-----------------------x-----------------------
+import java.util.Scanner;
+
+class Company{
+   private String empname;
+   private int eid;
+   private String efname;
+   private long econtact;
+   private String eaddress;
+   private long ealternate_number;
+   private int salary;
+   private String edepartment;
+   private long bankaccountnumber;
+   private String post;
+
+   public void setEmpname(String empname){
+    this.empname = empname;
+   }
+   public String getEmpname(){
+    return empname;
+   }
+   public void setEid(int eid){
+    this.eid = eid; 
+   }
+   public int getEid(){
+    return eid;
+   }
+   public void setFname(String efname){
+    this.efname = efname;
+   }
+   public String getFname(){
+    return efname;
+   }
+   public void setEcontact(long econtact){
+    this.econtact=econtact;
+   }
+   public long getEcontact(){
+    return econtact;
+   }
+   public void setEaddress(String eaddress){
+    this.eaddress=eaddress;
+   }
+   public String getEaddress(){
+    return eaddress;
+   }
+   public void setEalternate_number(long ealternate_number){
+    this.ealternate_number = ealternate_number;
+   }
+   public long getEalternate_number(){
+    return ealternate_number;
+   }
+   public void setSalary(int salary){
+    this.salary = salary;
+   }
+   public int getSalary(){
+    return salary;
+   }
+   public void setEdepartment(String edepartment){
+    this.edepartment = edepartment;
+   }
+   public String getEdepartment(){
+    return edepartment;
+   }
+   public void setBankaccountnumber(long bankaccountnumber){
+    this.bankaccountnumber=bankaccountnumber;
+   }
+   public long getBankaccountnumber() {
+       return bankaccountnumber;
+   }
+   public void setPost(String post){
+    this.post=post;
+   }
+   public String getPost(){
+    return post;
+   }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Company cmp = new Company();
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Name: ");
+        String empname = sc.nextLine();
+        cmp.setEmpname(empname);
+
+        System.out.print("Enter Emp ID: ");
+        int eid = sc.nextInt();
+        cmp.setEid(eid);
+
+        sc.nextLine();
+        
+        System.out.print("Enter Father's Name: ");
+        String fname = sc.nextLine();
+        cmp.setFname(fname);
+
+        System.out.print("Enter Contact: ");
+        long econtact = sc.nextLong();
+        cmp.setEcontact(econtact);
+
+        
+
+        System.out.print("Enter Address: ");
+        String eaddress = sc.nextLine();
+        cmp.setEaddress(eaddress);
+
+        sc.nextLine();
+
+        System.out.print("Enter Alternate Number: ");
+        long ealternate_number = sc.nextLong();
+        cmp.setEalternate_number(ealternate_number);
+
+        System.out.print("Enter Salary: ");
+        int salary = sc.nextInt();
+        cmp.setSalary(salary);
+
+        System.out.print("Enter Department: ");
+        String edepartment = sc.nextLine();
+        cmp.setEdepartment(edepartment);
+
+        sc.nextLine();
+
+        System.out.print("Enter Bank Account Number: ");
+        long bankaccountnumber = sc.nextLong();
+        cmp.setBankaccountnumber(bankaccountnumber);
+
+        sc.nextLine();
+
+        System.out.print("Enter Post: ");
+        String post = sc.nextLine();
+        cmp.setPost(post);
+        System.out.println("\n---------------------X---------------------");
+        System.out.println("Name: "+cmp.getEmpname());
+        System.out.println("Employee ID: "+cmp.getEid());
+        System.out.println("Father's Name: "+cmp.getFname());
+        System.out.println("Conatct: "+cmp.getEcontact());
+        System.out.println("Address: "+cmp.getEaddress());
+        System.out.println("Alternate Number: "+cmp.getEalternate_number());
+        System.out.println("Department: "+cmp.getEdepartment());
+        System.out.println("Salary: "+cmp.getSalary());
+        System.out.println("Bank Account Number: "+cmp.getBankaccountnumber());
+        System.out.println("Post: "+cmp.getPost());
+    }
+}
+-------------------------------------------------------------------------------------------------
+4): class A
+addition :default constructor 
+class Main :access
+-----------------------x-----------------------
+class A{
+    A(){
+        int a = 10,b = 30,c;
+        c = a+b;
+        System.out.println(c);
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        new A();
+    }
+}
+-------------------------------------------------------------------------------------------------
+5): class A
+addition :default constructor 
+class B
+sub :default constructor 
+class C
+multi :default constructor 
+class D
+div :default constructor 
+classs Main :access
+mod :default constructor
+-----------------------x-----------------------
+class A{
+    A(){
+        int a = 10,b = 30,c;
+        c = a+b;
+        System.out.println("Add: "+c);
+    }
+}
+class B{
+    B(){
+        int a = 90,b = 30,c;
+        c = a-b;
+        System.out.println("Subtract: "+c);
+    }
+}
+class C{
+    C(){
+        int a = 10,b = 30,c;
+        c = a+b;
+        System.out.println("Multiply: "+c);
+    }
+}
+class D{
+    D(){
+        int a = 500,b = 50,c;
+        c = a+b;
+        System.out.println("Divide: "+c);
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        new A();
+        new B();
+        new C();
+        new D();
+        new Main();
+    }
+    Main(){
+        int a = 30,b=4,c;
+        c=a%b;
+        System.out.println("Mod: "+c);
+    }
+}
+-------------------------------------------------------------------------------------------------
