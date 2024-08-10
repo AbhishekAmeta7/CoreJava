@@ -1,0 +1,365 @@
+1): user input :
+instance variable : constructor value 
+class Student 
+name
+fname
+nmame
+class
+address
+contact 
+roll_no 
+gender 
+marks 
+-----------------------------x-----------------------------
+import java.util.Scanner;
+class Student{
+    String name;
+    String fname;
+    String mname;
+    String cLass;
+    String address;
+    long contact;
+    int roll_no;
+    String gender;
+    Student(String name,String fname,String mname,String cLass,String address,long contact,int roll_no,
+    String gender){
+        this.name=name;
+        this.fname=fname;
+        this.mname=mname;
+        this.cLass = cLass;
+        this.address=address;
+        this.contact=contact;
+        this.roll_no=roll_no;
+        this.gender=gender;
+    }
+}
+public class Main{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Name: ");
+        String name = sc.nextLine();
+        System.out.print("Enter Father's Name: ");
+        String fname = sc.nextLine();
+        System.out.print("Enter Mother's Name: ");
+        String mname = sc.nextLine();
+        System.out.print("Enter Class: ");
+        String cLass = sc.nextLine();
+        System.out.print("Enter Address: ");
+        String address = sc.nextLine();
+        System.out.print("Enter Contact: ");
+        long contact = sc.nextLong();
+        sc.nextLine();
+        System.out.print("Enter Roll No: ");
+        int roll_no = sc.nextInt();
+        sc.nextLine();
+        System.out.print("Enter Gender: ");
+        String gender = sc.nextLine();
+        Student stu = new Student(name, fname, mname, cLass, address, contact, roll_no, gender);
+        System.out.println("----------X----------");
+        System.out.println("Name: "+name);
+        System.out.println("Father's Name: "+fname);
+        System.out.println("Mother's Name: "+mname);
+        System.out.println("Class: "+cLass);
+        System.out.println("Address: "+address);
+        System.out.println("Contact: "+contact);
+        System.out.println("Roll No: "+roll_no);
+        System.out.println("Gender: "+gender);
+    }
+}
+-----------------------------------------------------------------------------------------------------------------
+2): instance variable : constructor value 
+company 
+empname
+eid
+efname
+econtact
+eaddress 
+ealternate_number 
+salary 
+edepartment 
+bankaccountnumber
+post 
+-----------------------------x-----------------------------
+import java.util.Scanner;
+class Company{
+    String empname;
+    int eid;
+    String fname;
+    long contact;
+    String address;
+    long ealternate_number;
+    int salary; 
+    String edepartment; 
+    long bankaccountnumber;
+    String post;
+    Company(String empname,int eid,String fname ,long contact,String address,long ealternate_number,
+    int salary,String edepartment,long bankaccountnumber,String post){
+        this.empname=empname;
+        this.eid=eid;
+        this.fname=fname;
+        this.contact=contact;
+        this.address=address;
+        this.contact=contact;
+        this.ealternate_number=ealternate_number;
+        this.salary=salary;
+        this.edepartment=edepartment;
+        this.bankaccountnumber=bankaccountnumber;
+        this.post=post;
+    }
+}
+public class Main{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Name: ");
+        String empname = sc.nextLine();
+        System.out.print("Enter ID: ");
+        int eid = sc.nextInt();
+        sc.nextLine();
+        System.out.print("Enter Father's Name: ");
+        String fname = sc.nextLine();
+        System.out.print("Enter Contact: ");
+        long contact = sc.nextLong();
+        sc.nextLine();
+
+        System.out.print("Enter Address: ");
+        String address = sc.nextLine();
+        
+        System.out.print("Enter Alternate Number: ");
+        long ealternate_number = sc.nextLong();
+        System.out.print("Enter Salary: ");
+        int salary= sc.nextInt();
+        sc.nextLine();
+
+        System.out.print("Enter Department: ");
+        String edepartment = sc.nextLine();
+        System.out.print("Enter Bank Account Number: ");
+        long bankaccountnumber = sc.nextLong();
+        sc.nextLine();
+
+        System.out.print("Enter Post: ");
+        String post = sc.nextLine();
+        System.out.println("----------X----------");
+        System.out.println("Name: "+empname);
+        System.out.println("Employee ID: "+eid);
+        System.out.println("Father's Name: "+fname);
+        System.out.println("Contact: "+contact);
+        System.out.println("Address: "+address);
+        System.out.println("Alternate Number: "+ealternate_number);
+        System.out.println("Salary: "+salary);
+        System.out.println("Department: "+edepartment);
+        System.out.println("Bank Account Number: "+bankaccountnumber);
+        System.out.println("Post: "+post);
+        Company cmp = new Company(empname, salary, fname, contact, address, ealternate_number, salary, edepartment, bankaccountnumber, post);
+    }
+}
+-----------------------------------------------------------------------------------------------------------------
+3):class A
+addition :parameterised constructor 
+classs Main :access
+-----------------------------x-----------------------------
+import java.util.Scanner;
+class A{
+    A(int a,int b){
+        System.out.println(a+b);
+    }
+}
+public class Main{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter 1st Number: ");
+        int a = sc.nextInt();
+        System.out.print("Enter 2nd Number: ");
+        int b = sc.nextInt();
+        new A(a,b); 
+    }
+}
+-----------------------------------------------------------------------------------------------------------------
+4):class A
+addition :parameterised constructor 
+
+class B
+sub :parameterised constructor 
+
+
+class C
+multi :parameterised constructor 
+
+
+class D
+div :parameterised constructor 
+
+classs Main :access
+mod :parameterised constructor
+-----------------------------x-----------------------------
+import java.util.Scanner;
+class A{
+    A(int a,int b){
+        System.out.println("Addition: "+(a+b));
+    }
+}
+class B{
+    B(int a,int b){
+        System.out.println("Subtract: "+(a-b));
+    }
+}
+class C{
+    C(int a,int b){
+        System.out.println("Multiply: "+(a*b));
+    }
+}
+class D{
+    D(int a,int b){
+        System.out.println("Divide: "+(a/b));
+    }
+}
+public class Main{
+    Main(int a,int b){
+        System.out.println("Mod: "+(a%b));
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter 1st Number: ");
+        int a = sc.nextInt();
+        System.out.print("Enter 2nd Number: ");
+        int b = sc.nextInt();
+        new A(a, b); 
+        new B(a, b);
+        new C(a, b);
+        new D(a, b);
+        new Main(a, b);
+    }
+}
+-----------------------------------------------------------------------------------------------------------------
+5): class A
+method1 :no return and no argument 
+
+class B ex A
+method2:no return and no argument 
+
+class Main :access
+-----------------------------x-----------------------------
+import java.util.Scanner;
+class A{
+    public void method1(){
+        System.out.println("This is method1 class A");
+    }
+}
+class B extends A{
+    public void method2(){
+        System.out.println("This is method2 class B");
+    }
+}
+public class Main{
+    public static void main(String[] args) {
+        B b = new B();
+        b.method1();
+        b.method2();
+    }
+}
+-----------------------------------------------------------------------------------------------------------------
+6): class A
+method1 :no return and  argument 
+
+class B ex A
+method2: return and no argument 
+
+class Main :access
+-----------------------------x-----------------------------
+import java.util.Scanner;
+class A{
+    public void method1(int a){
+        System.out.println("This is method1 class A");
+        System.out.println(a);
+    }
+}
+class B extends A{
+    public int method2(){
+        int a = 20; 
+        System.out.println("This is method2 class B");
+        return a;
+    }
+}
+public class Main{
+    public static void main(String[] args) {
+        B b = new B(); 
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Number: ");
+        int a = sc.nextInt();
+        b.method1(a);
+        System.out.println(b.method2());
+    }
+}
+-----------------------------------------------------------------------------------------------------------------
+7): class A
+method1 : return and  argument 
+class B ex A
+method2: return and no argument 
+class Main :access
+-----------------------------x-----------------------------
+import java.util.Scanner;
+class A{
+    public int method1(int a){
+        System.out.println("This is method1 class A");
+        return a;
+    }
+}
+class B extends A{
+    public int method2(){
+        int a = 20; 
+        System.out.println("This is method2 class B");
+        return a;
+    }
+}
+public class Main{
+    public static void main(String[] args) {
+        B b = new B(); 
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Number: ");
+        int a = sc.nextInt();
+        System.out.println(b.method1(a));
+        System.out.println(b.method2());
+    }
+}
+-----------------------------------------------------------------------------------------------------------------
+8): class A
+getter setter
+
+class B ex A
+getter setter
+
+class Main :access
+-----------------------------x-----------------------------
+import java.util.Scanner;
+class A{
+    private int a;
+    public void setA(int a){
+        this.a=a;
+    }
+    public int getA(){
+        return a;
+    }
+}
+class B extends A{
+    private int b;
+    public void setB(int b){
+        this.b=b;
+    }
+    public int getB(){
+        return b;
+    }
+}
+public class Main{
+    public static void main(String[] args) {
+       B obj = new B();
+       Scanner sc = new Scanner(System.in);
+       System.out.print("Enter a: ");
+       int a = sc.nextInt();
+       obj.setA(a);
+       System.out.print("Enter b: ");
+       int b = sc.nextInt();
+       obj.setB(b);
+       System.out.println("Class A \n"+obj.getA());
+       System.out.println("Class B \n"+obj.getB());
+    }
+}
+-----------------------------------------------------------------------------------------------------------------
