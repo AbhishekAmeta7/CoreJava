@@ -1,0 +1,409 @@
+1): multilevel inheritance : 
+
+class A
+method1 :no return and no argument 
+
+class B
+method2 :no return and no argument
+
+class C 
+method3 :no return and no argument
+
+class Main :access
+--------------------x--------------------
+ class A{
+    public void method1(){
+        System.out.println("method1 class A");
+    }
+}
+class B extends A{
+    public void method2(){
+        System.out.println("method2 class B");
+    }
+}
+class C extends B{
+    public void method3(){
+        System.out.println("method3 class C");
+    }
+}
+public class MultiLeven_In {
+    public static void main(String[] args){
+        C obj = new C();
+        obj.method1();
+        obj.method2();
+        obj.method3();
+    }
+}
+---------------------------------------------------------------------------------------------------
+2): multilevel inheritance : 
+class A
+method1 :no return and  argument
+
+class B
+method2: return and no argument
+
+class C 
+method3: return and  argument
+
+class Main :access
+--------------------x--------------------
+class A{
+    public void method1(int a){
+        System.out.println("method1 class A \n"+a);
+    }
+}
+class B extends A{
+    public void method2(int a){
+        System.out.println("method2 class B \n"+a);
+    }
+}
+class C extends B{
+    public void method3(int a){
+        System.out.println("method3 class C \n"+a);
+    }
+}
+public class MultiLeven_In {
+    public static void main(String[] args){
+        C obj = new C();
+        obj.method1(10);
+        obj.method2(11);
+        obj.method3(12);
+    }
+}
+---------------------------------------------------------------------------------------------------
+3): class A
+method1 :no return and no argument
+
+class B
+method2: no return and argument 
+
+class C
+method3:return and no argument 
+
+class D
+method4 :return and argument 
+
+class E
+method5 :covariant return type 
+
+classs Main :all access through child class k through
+--------------------x--------------------
+class A{
+    public void method1(){
+        System.out.println("method1 class A");
+    }
+}
+class B extends A{
+    public void method2(int a){
+        System.out.println("method2 class B \n"+a);
+    }
+}
+class C extends B{
+    public int method3(){
+        int a = 7;
+        System.out.println("method3 class C ");
+        return a;
+    }
+}
+class D extends C{
+    public int method4(int a){
+        System.out.println("Method4 class D");
+        return a;
+    }
+}
+class E extends D{
+     E method5(){
+        System.out.println("Covariant Return type");
+        return this;
+     }
+}
+public class MultiLeven_In {
+    public static void main(String[] args){
+        E obj = new E();
+        obj.method1();
+        obj.method2(11);
+        System.out.println(obj.method3());
+        System.out.println(obj.method4(99));
+        obj.method5();
+    }
+}
+---------------------------------------------------------------------------------------------------
+4):class A
+add
+
+class B
+multi
+
+class C 
+substraction 
+
+class Main :access
+
+getter and setter 
+--------------------x--------------------
+class A{
+    private int a;
+    private int b;
+    public void setA(int a,int b){
+        this.a=a;
+        this.b=b;
+    }
+    public int getA(){
+        return a;
+    }
+    public int getB(){
+        return b;
+    }
+    public void add()
+    {
+        System.out.println("Add: "+(a+b));
+    }
+}
+class B extends A{
+    private int x;
+    private int y;
+    public void setX(int x,int y){
+        this.x=x;
+        this.y=y;
+    }
+    public int getX(){
+        return x;
+    }
+    public int getY(){
+        return y;
+    }
+    public void multi()
+    {
+        System.out.println("Multi: "+(x*y));
+    }
+}
+class C extends B{
+    private int p;
+    private int q;
+    public void setP(int p,int q){
+        this.p=p;
+        this.q=q;
+    }
+    public int getP(){
+        return p;
+    }
+    public int getQ(){
+        return q;
+    }
+    public void sub()
+    {
+        System.out.println("sub: "+(p-q));
+    }
+}
+public class MultiLeven_In {
+    public static void main(String[] args){
+        C obj = new C();
+        obj.setA(40,50);
+        obj.getA();
+        obj.getB();
+        obj.add();
+        obj.setX(20, 10);
+        obj.getX();
+        obj.getY();
+        obj.multi();
+        obj.setP(77, 7);
+        obj.getA();
+        obj.getQ();
+        obj.sub();  
+    }
+}
+---------------------------------------------------------------------------------------------------
+5): multilevel inheritance :
+	instance variable : user input through same name 
+--------------------x--------------------
+import java.util.Scanner;
+class A{
+    int age;
+    String name;
+    void method1(int age,String name){
+        this.name=name;
+        this.age=age;
+        System.out.println("Name: "+name);
+        System.out.println("Age: "+age);
+    }
+}
+class B extends A{
+    long contact;
+    String cLass;
+    void method2(long contact,String cLass){
+        this.contact=contact;
+        this.cLass=cLass;
+        System.out.println("Contact: "+contact);
+        System.out.println("Class: "+cLass);
+    }
+}
+class C extends B{
+    int marks;
+    void method3(int marks){
+        this.marks=marks; 
+        System.out.println("Total Marks: "+marks); 
+    }
+}
+public class MultiLevel_In1{
+    public static void main(String[] args) {
+        C c = new C();
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Name: ");
+        String name = sc.nextLine();
+        System.out.print("Enter Age: ");
+        int age = sc.nextInt();
+        System.out.print("Enter Contact: ");
+        long contact = sc.nextLong();
+        sc.nextLine();
+        System.out.print("Enter Class:");
+        String cLass = sc.nextLine();
+        System.out.print("Enter Marks: ");
+        int marks = sc.nextInt();
+        System.out.println("------------X------------");
+        c.method1(age, name);
+        c.method2(contact, cLass);
+        c.method3(marks);
+    }
+}
+---------------------------------------------------------------------------------------------------
+6): multilevel inheritance :
+	instance variable : user input through different name 
+--------------------x--------------------
+import java.util.Scanner;
+class A{
+    int age;
+    String name;
+    void method1(int age,String name){
+        this.name=name;
+        this.age=age;
+        System.out.println("Name: "+name);
+        System.out.println("Age: "+age);
+    }
+}
+class B extends A{
+    long contact;
+    String cLass;
+    void method2(long contact,String cLass){
+        this.contact=contact;
+        this.cLass=cLass;
+        System.out.println("Contact: "+contact);
+        System.out.println("Class: "+cLass);
+    }
+}
+class C extends B{
+    int marks;
+    void method3(int marks){
+        this.marks=marks; 
+        System.out.println("Total Marks: "+marks); 
+    }
+}
+public class MultiLevel_In1{
+    public static void main(String[] args) {
+        C c = new C();
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Name: ");
+        String name1 = sc.nextLine();
+        System.out.print("Enter Age: ");
+        int x = sc.nextInt();
+        System.out.print("Enter Contact: ");
+        long co = sc.nextLong();
+        sc.nextLine();
+        System.out.print("Enter Class:");
+        String cl = sc.nextLine();
+        System.out.print("Enter Marks: ");
+        int num = sc.nextInt();
+        System.out.println("------------X------------");
+        c.method1(x, name1);
+        c.method2(co, cl);
+        c.method3(num);
+    }
+}
+---------------------------------------------------------------------------------------------------
+7): multilevel inheritance :
+	instance variable : user input through constant name 
+--------------------x--------------------
+import java.util.Scanner;
+class A{
+    int a;
+    void display(int a){
+        this.a = a;
+        System.out.println("a: "+a);
+    }
+}
+class B extends A{
+    int b;
+    void display1(int b){
+        this.b=b;
+        System.out.println("b: "+b);
+    }
+}
+class C extends B{
+    int add(){
+        return (a+b);
+    } 
+}
+
+public class MultiLevel_In1{
+    public static void main(String[] args){
+        C c = new C();
+        int x = 20,y=50;
+        c.display(x);
+        c.display1(y);
+        System.out.println(c.add());
+    }
+}
+---------------------------------------------------------------------------------------------------
+8): class A
+constructor :default :addition 
+
+class B
+constructor :default :substraction 
+
+class C
+constructor :default :division 
+
+class D
+constructor :default :multiplication 
+
+class E
+constructor :default :modular 
+
+classs Main :all access through child class k through
+--------------------x--------------------
+import java.util.Scanner;
+class A{
+    A(){
+        int a = 20,b=30;
+        System.out.println("Addition: "+(a+b));
+    }
+}
+class B extends A{
+    B(){
+        int a = 300,b=250;
+        System.out.println("Subtraction: "+(a-b));
+    }
+}
+class C extends B{
+    C(){
+        int a = 2,b=30;
+        System.out.println("Multiplication: "+(a*b));
+    }
+}
+class D extends C{
+    D(){
+        int a = 200,b=40;
+        System.out.println("Divide: "+(a/b));
+    }
+}
+class E extends D{
+    E(){
+        int a = 20,b=3;
+        System.out.println("Reminder: "+(a%b));
+    }
+}
+public class MultiLevel_In1{
+    public static void main(String[] args) {
+        E e = new E();
+    }
+}
+---------------------------------------------------------------------------------------------------
