@@ -1,0 +1,371 @@
+getter setter heirarichal inheritance
+------------------x---------------------
+class A{
+    private int a;
+    void setA(int a){
+        this.a=a;
+    }
+    int getA(){
+        return a;
+    }
+}
+class B extends A{
+    private int b;
+    void setB(int b){
+        this.b=b;
+    }
+    int getB(){
+        return b;
+    }
+}
+class C extends A{
+    private String name;
+    void setName(String name){
+        this.name=name;
+    }
+    String getName(){
+        return name;
+    }
+}
+public class InheritenceEx{
+    public static void main(String[] args) {
+        B b1 = new B();
+        b1.setA(7);
+        b1.setB(9);
+        System.out.println((b1.getA())+ " "+(b1.getB()));
+        C c1 = new C();
+        c1.setName("Abhishek");
+        System.out.println("Name: "+(c1.getName()));
+
+    }
+}
+-------------------------------------------------------------------------------------------------
+heirarichal inhertance :
+all primitive data type return and argument 
+------------------x---------------------
+class A{
+    int show(int a){
+        return a;
+    }
+    long show1(long l){
+        return l;
+    }
+}
+class B extends A{
+    float show2(float f){
+        return f;
+    }
+    double show3(double d){
+        return d;
+    }
+}
+class C extends A{
+    boolean show4(boolean b){
+        return b;
+    }
+    char show5(char c){
+        return c;
+    }
+}
+class InheritenceEx{
+    public static void main(String[] args) {
+        B b1 = new B();
+        System.out.println("int: "+b1.show(227));
+        System.out.println("long: "+b1.show1(3455334523l));
+        System.out.println("float: "+b1.show2(44.3f));
+        System.out.println("double: "+b1.show3(45643.5));
+        C c1 = new C();
+        System.out.println("boolean: "+c1.show4(true));
+        System.out.println("char: "+c1.show5('A'));
+    }
+}
+-------------------------------------------------------------------------------------------------
+return and no argument
+------------------x---------------------
+class A{
+    int show(){
+        int a = 20;
+        return a;
+    }
+    long show1(){
+        long l = 3648894959l;
+        return l;
+    }
+}
+class B extends A{
+    float show2(){
+        float f = 45.4f;
+        return f;
+    }
+    double show3(){
+        double d = 63743.5;
+        return d;
+    }
+}
+class C extends A{
+    boolean show4(){
+        boolean b = true;
+        return b;
+    }
+    char show5(){
+        char c = 'B';
+        return c;
+    }
+}
+class InheritenceEx{
+    public static void main(String[] args) {
+        B b1 = new B();
+        System.out.println("int: "+b1.show());
+        System.out.println("long: "+b1.show1());
+        System.out.println("float: "+b1.show2());
+        System.out.println("double: "+b1.show3());
+        C c1 = new C();
+        System.out.println("boolean: "+c1.show4());
+        System.out.println("char: "+c1.show5());
+    }
+}
+-------------------------------------------------------------------------------------------------
+no return and no argument
+------------------x---------------------
+class A{
+    void show(){
+        int a = 20;
+        System.out.println("int: "+a);
+    }
+    void show1(){
+        long l = 3648894959l;
+        System.out.println("long: "+l);
+        
+    }
+}
+class B extends A{
+    void show2(){
+        float f = 45.4f;
+        System.out.println("float: "+f);
+    }
+    void show3(){
+        double d = 63743.5;
+        System.out.println("double: "+d);
+    }
+}
+class C extends A{
+    void show4(){
+        boolean b = true;
+        System.out.println("boolean: "+b);
+    }
+    void show5(){
+        char c = 'T';
+        System.out.println("char: "+c);
+    }
+}
+class InheritenceEx{
+    public static void main(String[] args) {
+        B b1 = new B();
+        b1.show();
+        b1.show1();
+        b1.show2();
+        b1.show3();
+        C c1 = new C();
+        c1.show4();
+        c1.show5();
+        
+    }
+}
+-------------------------------------------------------------------------------------------------
+no return and argument
+------------------x---------------------
+class A{
+    void show(int a ){
+        System.out.println("int: "+a);
+    }
+    void show1(long l){ 
+        System.out.println("long: "+l);
+        
+    }
+}
+class B extends A{
+    void show2(float f){
+        System.out.println("float: "+f);
+    }
+    void show3(double d){
+        System.out.println("double: "+d);
+    }
+}
+class C extends A{
+    void show4(boolean b){
+        System.out.println("boolean: "+b);
+    }
+    void show5(char c){
+        System.out.println("char: "+c);
+    }
+}
+class InheritenceEx{
+    public static void main(String[] args) {
+        B b1 = new B();
+        b1.show(3432);
+        b1.show1(475930034059l);
+        b1.show2(34.76f);
+        b1.show3(748485.56);
+        C c1 = new C();
+        c1.show4(true);
+        c1.show5('H');
+        
+    }
+}
+-------------------------------------------------------------------------------------------------
+covariant return type 
+------------------x---------------------
+class A{
+    A show(int a ){
+        System.out.println("int: "+a);
+        return this;
+    }
+    A show1(long l){ 
+        System.out.println("long: "+l);
+        return this;
+    }
+}
+class B extends A{
+    B show2(float f){
+        System.out.println("float: "+f);
+        return this;
+    }
+    B show3(double d){
+        System.out.println("double: "+d);
+        return this;
+    }
+}
+class C extends A{
+    C show4(boolean b){
+        System.out.println("boolean: "+b);
+        return this;
+    }
+    C show5(char c){
+        System.out.println("char: "+c);
+        return this;
+    }
+}
+class InheritenceEx{
+    public static void main(String[] args) {
+        B b1 = new B();
+        b1.show(343244);
+        b1.show1(4759300359l);
+        b1.show2(39.76f);
+        b1.show3(8485.56);
+        C c1 = new C();
+        c1.show4(true);
+        c1.show5('F');
+        
+    }
+}
+-------------------------------------------------------------------------------------------------
+hierarchal inheritance :
+addition
+subtraction
+division
+multiplication
+modular
+------------------x---------------------
+import java.util.*;
+class A{
+    int addition(int a,int b){
+        return a+b;
+    }
+}
+class B extends A{
+    int subtraction(int a,int b){
+        return a-b;
+    }
+}
+class C extends A{
+    int multiplication(int a,int b){
+        return a*b;
+    }
+    int division(int a,int b){
+        return a/b;
+    }
+}
+class D extends A{
+    int moduler(int a,int b){
+        return a%b;
+    }
+}
+class InheritenceEx{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Two Number: ");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        B b1 = new B();
+        System.out.println("Addition: "+b1.addition(a, b));
+        System.out.println("subtraction: : "+b1.subtraction(a, b));
+        C c1 = new C();
+        System.out.println("Multiplication: "+c1.multiplication(a, b));
+        System.out.println("Division: "+c1.division(a, b));
+        D d1 = new D();
+        System.out.println("Moduler: "+d1.moduler(a, b));
+    }
+}
+-------------------------------------------------------------------------------------------------
+multiple inheritance
+------------------x---------------------
+class A {
+    void a() {
+        System.out.println("Parent Class A");
+    }
+}
+class B {
+    void b() {
+        System.out.println("Parent Class B");
+    }
+}
+class C extends A,B{
+    void c() {
+        System.out.println("Child Class C");
+    }
+}
+public class InheritenceEx {
+    public static void main(String[] args) {
+        C c1 = new C();
+        c1.a();
+        c1.b();
+        c1.c();
+    }
+}
+//Error---->ambiguity :compile become confuse which class run on priority.
+-------------------------------------------------------------------------------------------------
+hybrid inhertance 
+------------------x---------------------
+class A {
+    void a() {
+        System.out.println("Parent Class A");
+    }
+}
+class B {
+    void b() {
+        System.out.println("Parent Class B");
+    }
+}
+class C extends A,B{
+    void c() {
+        System.out.println("Child Class C");
+    }
+}
+class D extends C{
+    void d(){
+        System.out.println("Class D");
+    }
+}
+public class InheritenceEx {
+    public static void main(String[] args) {
+        D d = new D();
+        d.a();
+        d.b();
+        d.c();
+        d.d();
+    }
+}
+//Error---->ambiguity :compile become confuse which class run on priority.
+-------------------------------------------------------------------------------------------------
+
+
