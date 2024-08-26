@@ -1,0 +1,669 @@
+class A
+no return and no argument 
+
+class B
+no return and no argument 
+
+class Main 
+
+override 
+solve problem 
+----------------------X----------------------
+import java.util.Scanner;
+class A{
+    void disp(){
+        System.out.println("Class A");
+    }
+}
+class B extends A{
+    void disp(){
+        super.disp();
+        System.out.println("Class B");
+    }
+}
+public class Practice1{
+    public static void main(String[] args) {
+        B b = new B();
+        b.disp();
+    }
+}
+--------------------------------------------------------------------------------------------------------------------
+class A
+ return and no argument 
+
+class B
+ return and no argument 
+
+class Main 
+
+override 
+solve problem
+----------------------X----------------------
+import java.util.Scanner;
+class A{
+    int disp(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a: ");
+        int a = sc.nextInt();
+        System.out.println("class A");
+        return a;
+    }
+}
+class B extends A{
+    int disp(){
+        super.disp();
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter b: ");
+        int b = sc.nextInt();
+        System.out.println("Class B");
+        return b;
+    }
+}
+public class Practice1{
+    public static void main(String[] args) {
+        B b = new B();
+        System.out.println(b.disp());
+    }
+}
+--------------------------------------------------------------------------------------------------------------------
+class A
+no return and  argument 
+
+class B
+no return and  argument 
+
+class Main 
+
+override 
+solve problem
+----------------------X----------------------
+import java.util.Scanner;
+class A{
+    void disp(int a){
+        System.out.println("class A");
+        System.out.println(a);
+    }
+}
+class B extends A{
+    void disp(int b){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a: ");
+        int a = sc.nextInt();
+        super.disp(a);
+        System.out.println("Class B");
+        System.out.println(b);
+    }
+}
+public class Practice1{
+    public static void main(String[] args) {
+        B b1 = new B();
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter b: ");
+        int b = sc.nextInt();
+        b1.disp(b);
+
+    }
+}
+--------------------------------------------------------------------------------------------------------------------
+class A
+ return and  argument 
+
+class B
+ return and  argument 
+
+class Main 
+
+override 
+solve problem
+----------------------X----------------------
+import java.util.Scanner;
+class A{
+    int disp(int a){
+        System.out.println("class A");
+        return a;
+    }
+}
+class B extends A{
+    int disp(int b){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a: ");
+        int a = sc.nextInt();
+        System.out.println(super.disp(a));
+        System.out.println("Class B");
+        return b;
+    }
+}
+public class Practice1{
+    public static void main(String[] args) {
+        B b1 = new B();
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter b: ");
+        int b = sc.nextInt();
+        System.out.println(b1.disp(b));
+
+    }
+}
+--------------------------------------------------------------------------------------------------------------------
+class A
+covariant return type 
+
+class B
+covariant return type 
+
+class Main 
+
+override 
+solve problem 
+----------------------X----------------------
+import java.util.Scanner;
+class A{
+    A disp(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a: ");
+        int a = sc.nextInt();
+        System.out.println("class A");
+        System.out.println(a);
+        return this;
+    }
+}
+class B extends A{
+    B disp(){
+        super.disp();
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a: ");
+        int b = sc.nextInt();
+        System.out.println("Class B");
+        System.out.println(b);
+        return this;
+    }
+}
+public class Practice1{
+    public static void main(String[] args) {
+        B b1 = new B();
+        b1.disp();
+    }
+}
+--------------------------------------------------------------------------------------------------------------------
+class A
+no return and no argument 
+
+class B
+no return and  argument 
+
+class Main 
+
+override 
+solve problem
+----------------------X----------------------
+import java.util.Scanner;
+class A{
+    void disp(int a){
+        System.out.println("class A");
+        System.out.println(a);
+    }
+}
+class B extends A{
+    void disp(int b){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a: ");
+        int a = sc.nextInt();
+        super.disp(a);
+        System.out.println("Class B");
+        System.out.println(b);
+    }
+}
+public class Practice1{
+    public static void main(String[] args) {
+        B b1 = new B();
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter b: ");
+        int b = sc.nextInt();
+        b1.disp(b);
+
+    }
+}
+--------------------------------------------------------------------------------------------------------------------
+class A
+no return and  argument 
+
+class B
+no return and no argument 
+
+class Main 
+
+override 
+solve problem
+----------------------X----------------------
+import java.util.Scanner;
+class A{
+    void disp(int a){
+        System.out.println("class A");
+        System.out.println(a);
+    }
+}
+class B extends A{
+    void disp(int b){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a: ");
+        int a = sc.nextInt();
+        super.disp(a);
+        System.out.println("Class B");
+        System.out.println(b);
+    }
+}
+public class Practice1{
+    public static void main(String[] args) {
+        B b1 = new B();
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter b: ");
+        int b = sc.nextInt();
+        b1.disp(b);
+
+    }
+}
+--------------------------------------------------------------------------------------------------------------------
+class A
+ return and no argument :covariant type 
+
+class B
+ return and  argument :covariant type 
+
+class Main 
+
+override 
+solve problem 
+----------------------X----------------------
+import java.util.Scanner;
+class A{
+    A disp(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a: ");
+        int a = sc.nextInt();
+        System.out.println("class A");
+        System.out.println(a);
+        return this;
+    }
+}
+class B extends A{
+    B disp(){
+        super.disp();
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a: ");
+        int b = sc.nextInt();
+        System.out.println("Class B");
+        System.out.println(b);
+        return this;
+    }
+}
+public class Practice1{
+    public static void main(String[] args) {
+        B b1 = new B();
+        b1.disp();
+    }
+}
+--------------------------------------------------------------------------------------------------------------------
+overriding :single level
+----------------------X----------------------
+class A{
+   int calculation(int a,int b){
+    return a+b;
+   }
+}
+class B extends A{
+    int calculation(int a,int b,int c){
+        System.out.println(super.calculation(70, 40));
+        return a+b+c;
+    }
+}
+public class Practice1{
+    public static void main(String[] args) {
+        B b1 = new B();
+        System.out.println(b1.calculation(50,40,70));
+    }
+}
+--------------------------------------------------------------------------------------------------------------------
+overriding :multilevel level
+----------------------X----------------------
+class A{
+   int calculation(int a,int b){
+    return a+b;
+   }
+}
+class B extends A{
+    int calculation(int a,int b,int c){
+        System.out.println(super.calculation(70, 40));
+        return a+b+c;
+    }
+}
+class C extends B{
+    int calculation(int a,int b,int c,int d){
+        System.out.println(super.calculation(70, 30,50));
+        return a+b+c+d;
+    }
+}
+public class Practice1{
+    public static void main(String[] args) {
+        C c1 = new C();
+        System.out.println(c1.calculation(50,40,70,40));
+    }
+}
+--------------------------------------------------------------------------------------------------------------------
+overriding :heirarichal level 
+----------------------X----------------------
+class A{
+   int calculation(int a,int b){
+    return a+b;
+   }
+}
+class B extends A{
+    int calculation(int a,int b,int c){
+        System.out.println(super.calculation(70, 40));
+        return a+b+c;
+    }
+}
+class C extends A{
+    int calculation(int a,int b,int c,int d){
+        return a+b+c+d;
+    }
+}
+public class Practice1{
+    public static void main(String[] args) {
+        B b1 = new B();
+        System.out.println(b1.calculation(60, 90, 150));
+        C c1 = new C();
+        System.out.println(c1.calculation(50,40,70,40));
+    }
+}
+--------------------------------------------------------------------------------------------------------------------
+overriding :multiple level
+----------------------X----------------------
+
+--------------------------------------------------------------------------------------------------------------------
+overriding :hybrid level
+----------------------X----------------------
+
+--------------------------------------------------------------------------------------------------------------------
+class A 
+no return and no argument 
+return and argument 
+no return and argument 
+return and no argument 
+covariant return type 
+
+class B 
+no return and no argument 
+return and argument 
+no return and argument 
+return and no argument 
+covariant return type 
+
+class Main 
+access
+
+override 
+solve problem 
+----------------------X----------------------
+class A{
+  void sayHello(){
+    System.out.println("Hello!...class A");
+  }
+  int add(int a,int b){
+    return a+b;
+  }
+  void sub(int a,int b){
+    System.out.println("Subtraction: "+(a-b));
+  }
+  int multi(){
+    int a = 20,b=3;
+    return a*b;
+  }
+  A divide(int a,int b){
+    System.out.println("Division: "+(a/b));
+    System.out.println("-----------------");
+    return this;
+  }
+}
+class B extends A{
+    void sayHello(){
+        super.sayHello();
+        System.out.println("Add: "+super.add(80, 90));
+        super.sub(90, 70);
+        System.out.println("Multiply: "+super.multi());
+        super.divide(120, 5);
+        System.out.println("Hello!...class B");
+      }
+      int add(int a,int b){
+        return a+b;
+      }
+      void sub(int a,int b){
+        System.out.println("Subtraction: "+(a-b));
+      }
+      int multi(){
+        int a = 20,b=3;
+        return a*b;
+      }
+      B divide(int a,int b){
+        System.out.println("Division: "+(a/b));
+        return this;
+      }
+}
+public class Practice1{
+    public static void main(String[] args) {
+        B b1 = new B();
+        b1.sayHello();
+        System.out.println("Add: "+b1.add(40, 90));
+        b1.sub(90, 30);
+        System.out.println("Multiply: "+b1.multi());
+        b1.divide(90, 2);
+        
+    }
+}
+--------------------------------------------------------------------------------------------------------------------
+constant values : 
+
+class College 
+instance variable : 
+		name
+		address
+		contact number 
+		staff
+		library 
+		email 
+	display() 
+	print all 
+
+class Student 
+instance variable : 
+		name
+		address
+		contact number 
+		fname
+		mname
+		idnumber
+		email 
+	display() 
+	print all 
+
+
+class Main 
+access 
+----------------------X----------------------
+class College{
+  String name;
+  String address;
+	long contact;
+	int staff;
+	String library; 
+	String email; 
+  void display(String name,String address,long contact,int staff,String library,String email){
+    this.name=name;
+    this.address=address;
+    this.contact=contact;
+    this.staff=staff;
+    this.library=library;
+    this.email=email;
+    System.out.println("!--College--!");
+    System.out.println("Name: "+name);
+    System.out.println("Address: "+address);
+    System.out.println("Contact: "+contact);
+    System.out.println("Staff: "+staff);
+    System.out.println("Library: "+library);
+    System.out.println("Email: "+email);
+    System.out.println("---------X---------");
+  } 
+}
+class Student extends College{
+    String name;
+		String address;
+		long contact;
+		String fname;
+		String mname;
+		int idnumber;
+		String email; 
+    void display(String name,String address,long contact,String fname,String mname,int idnumber,String email){
+      super.display("XYZ","Udaipur",123456789,20,"ABC","abcd123@gmail.com" );
+      this.name=name;
+      this.address=address;
+      this.contact=contact;
+      this.fname=fname;
+      this.mname=mname;
+      this.idnumber=idnumber;
+      this.email=email;
+      System.out.println("!--Student--!");
+      System.out.println("Name: "+name);
+      System.out.println("Address: "+address);
+      System.out.println("Contact: "+contact);
+      System.out.println("Father's Name: "+fname);
+      System.out.println("Mother's Name: "+mname);
+      System.out.println("ID Number: "+idnumber);
+      System.out.println("Email: "+email);
+    }
+}
+public class Practice1{
+    public static void main(String[] args){
+      Student s = new Student();
+      s.display("PQR", "Chittorgarh", 1234321000,"PQRS","TUV",101,"xyz321@gmail.com");  
+    }
+}
+--------------------------------------------------------------------------------------------------------------------
+user input values : 
+
+class College 
+instance variable : 
+		name
+		address
+		contact number 
+		staff
+		library 
+		email 
+	display() 
+	print all 
+
+class Student 
+instance variable : 
+		name
+		address
+		contact number 
+		fname
+		mname
+		idnumber
+		email 
+	display() 
+	print all 
+
+
+class Main 
+access 
+----------------------X----------------------
+import java.util.*;
+class College{
+  String name;
+  String address;
+	long contact;
+	int staff;
+	String library; 
+	String email; 
+  void display(String name,String address,long contact,int staff,String library,String email){
+    this.name=name;
+    this.address=address;
+    this.contact=contact;
+    this.staff=staff;
+    this.library=library;
+    this.email=email;
+    System.out.println("!--College--!");
+    System.out.println("Name: "+name);
+    System.out.println("Address: "+address);
+    System.out.println("Contact: "+contact);
+    System.out.println("Staff: "+staff);
+    System.out.println("Library: "+library);
+    System.out.println("Email: "+email);
+    System.out.println("---------X---------");
+  } 
+}
+class Student extends College{
+    String name1;
+		String address1;
+		long contact1;
+		String fname;
+		String mname;
+		int idnumber;
+		String email1; 
+    void display(String name1,String address1,long contact1,String fname,String mname,int idnumber,String email1){
+      Scanner sc = new Scanner(System.in);
+      System.out.print("Enter College Name: ");
+      name = sc.nextLine();
+      System.out.print("Enter Address: ");
+      address = sc.nextLine();
+      System.out.print("Enter Contact: ");
+      contact = sc.nextLong();
+      System.out.print("Enter No. Of Staff: ");
+      staff = sc.nextInt();
+      sc.nextLine();
+      System.out.print("Enter Lobrary Name: ");
+      library = sc.nextLine();
+      System.out.print("Enter Email: ");
+      email = sc.nextLine();
+      super.display(name,address,contact,staff,library,email);
+      this.name1=name1;
+      this.address1=address1;
+      this.contact1=contact1;
+      this.fname=fname;
+      this.mname=mname;
+      this.idnumber=idnumber;
+      this.email1=email1;
+      System.out.println("!--Student--!");
+      System.out.println("Name: "+name1);
+      System.out.println("Address: "+address1);
+      System.out.println("Contact: "+contact1);
+      sc.nextLine();
+      System.out.println("Father's Name: "+fname);
+      System.out.println("Mother's Name: "+mname);
+      System.out.println("ID Number: "+idnumber);
+      sc.nextLine();
+      System.out.println("Email: "+email1);
+    }
+}
+public class Practice1{
+    public static void main(String[] args){
+      Student s = new Student();
+      Scanner sc = new Scanner(System.in);
+      System.out.print("Enter Name Of Student: ");
+      String name1 = sc.nextLine();
+      System.out.print("Enter Address: ");
+      String address1 = sc.nextLine();
+      System.out.print("Enter Contact: ");
+      long contact1 = sc.nextLong();
+      sc.nextLine();
+      System.out.print("Enter Father's Name: ");
+      String fname = sc.nextLine();
+      System.out.print("Enter Mother's Name: ");
+      String mname = sc.nextLine();
+      System.out.print("Enter ID Number: ");
+      int idnumber = sc.nextInt();
+      sc.nextLine();
+      System.out.print("Enter Email: ");
+      String email1 = sc.nextLine();
+      s.display(name1, address1, contact1,fname,mname,idnumber,email1);  
+    }
+}
+--------------------------------------------------------------------------------------------------------------------
