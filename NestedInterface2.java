@@ -27,13 +27,3 @@ public class NestedInterface2{
         d.disp(7);
     }
 }
-/*2): interface A :method1 :return and argument 
-	interface B :method2 :return and no argument 
-		interface C :method3 :no return and argument 
-
-
-class 
-access
-
-Main 
-class k through accesss*/
