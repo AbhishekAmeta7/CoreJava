@@ -23,8 +23,3 @@ public class ClassInterfaceClass{
         e.disp2();
     }
 }
-/*7): class
-     interface 
-	class 
-
-access*/
