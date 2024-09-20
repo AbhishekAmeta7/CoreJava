@@ -17,8 +17,3 @@ public class B2 extends Abstrcation2{
         return a;
     } 
 }
-// abstract class :
-// 	constructor :default 
-// 	 return and no argument : abstract method
-// 	 return and  argument : abstract method
-// class B extends abstract class 
