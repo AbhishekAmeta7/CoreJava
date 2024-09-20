@@ -1,23 +1,16 @@
 public class Aggregation2 {
     public static void main(String[] args) {
-        A1 a = new A1();
-        a.show();
-        a.show1(7);
-        B1 b = new B1();
-        b.show();
-        System.out.println("return & argument in Class B1: "+b.show1(40));
+        B2 b = new B2(78);
+        System.out.println(b.show());
+        System.out.println(b.sho1(80));
     }
 }
-/*
- file A
-no return and no argument 
-no return and argument 
+/*abstract class :
+	constructor :default 
+	 return and no argument : abstract method
+	 return and  argument : abstract method
 
-file B
-return and no argument 
-return and argument 
+class B extends abstract class 
 
-file Main 
 
-aggregation
-*/
+class Main */
