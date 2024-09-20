@@ -1,51 +1,27 @@
 interface A{
-    void show();
+    void display1();
 }
 interface B{
-    int show1();
+    int display2();
 }
 interface C{
-    int show3(int a);
+    int display3(int a);
 }
 interface D{
-    void show4(int a);
+    void display4(int a);
 }
-class E implements A,B,C,D{
-    public void show(){
-        System.out.println("show method no return and no argument");
+public class InterfaceEx1 implements A,B,C,D {
+    public void display1(){
+        System.out.println("display1 method inside interface A");
     }
-    public int show1(){
-        System.out.println("show method with return and no argument");
+    public int display2(){
+        System.out.println("dispaly2 method indide interface B");
         return 0;
     }
-    public int show3(int a){
+    public int display3(int a){
         return a;
     }
-    public void show4(int a){
-        System.out.println("show method no return and with argument "+a);
+    public void display4(int a){
+        System.out.println("display4 method inside interface D "+a);
     }
 }
-public class InterfaceEx1{
-    public static void main(String[] args) {
-        E e = new E();
-        e.show();
-        e.show1();
-        System.out.println("show method with return and with argument "+e.show3(99));
-        e.show4(11);
-    }
-}
-/*interface 
-	method1 :no return and no argument 
-
-interface 
-	method2 : return and no argument 
-
-interface 
-	method3: return and  argument 
-
-interface 
-	method4 :no return and  argument
-
-class B imple 
-
-Main class access*/
