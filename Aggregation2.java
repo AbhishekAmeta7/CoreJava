@@ -5,12 +5,3 @@ public class Aggregation2 {
         System.out.println(b.sho1(80));
     }
 }
-/*abstract class :
-	constructor :default 
-	 return and no argument : abstract method
-	 return and  argument : abstract method
-
-class B extends abstract class 
-
-
-class Main */
