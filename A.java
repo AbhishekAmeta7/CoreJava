@@ -1,11 +1,8 @@
 class A {
-    public void show(){
-        System.out.println("Aggreation Example");
-    }    
+    String name;
+    int num;
+    A(String name,int num){
+        this.name = name;
+        this.num = num;
+    }
 }
-// file A 
-
-// no return and no argument 
-
-// file Main 
-// aggregation
